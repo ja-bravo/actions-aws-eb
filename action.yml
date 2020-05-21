@@ -1,15 +1,18 @@
 # action.yml
 name: 'AWS Elastic Beanstalk cli'
 
-author: Habid Manzur
+author: Jose bravo
 
-description: 'Provide eb cli commands'
+description: 'Provides eb cli commands and a way to move to another folder'
 
 branding:
   icon: 'terminal'  
   color: 'white'
   
 inputs:
+  folder:
+    description: 'From where to run the eb command'
+
   command:  # id of input
     description: 'eb <command>'
     required: true
@@ -20,3 +23,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.command }}
+    - ${{ inputs.folder }}
