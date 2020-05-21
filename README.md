@@ -15,7 +15,7 @@ This action run [eb cli](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/
 ## Example usage
 
 ```YAML
-uses: ja-bravo/actions-aws-eb@v1
+uses: ja-bravo/actions-aws-eb@v1.0.0
 with:
   folder: './deploy'
   command: 'deploy ${{ secrets.ENVIRONMENT_NAME }}'
